@@ -1,0 +1,13 @@
+---
+import Layout from "../layouts/Layout.astro";
+import HttpMd from '../content/docs/http.md';
+import Navigation from "../components/Navigation.astro";
+---
+
+<Layout title="HTTP | Arquitectura Hexagonal en Laravel">
+    <section class="prose prose-sm md:prose-base lg:prose-lg mx-auto my-10">
+        <HttpMd />
+    </section>
+
+    <Navigation textPrevius="Anterior: Infraestructura" hrefPrevius="/infraestructura" textNext="Siguiente: Agradecimientos" hrefNext="/agradecimientos" />
+</Layout>

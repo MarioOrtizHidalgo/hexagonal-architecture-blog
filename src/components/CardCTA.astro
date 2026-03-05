@@ -1,0 +1,43 @@
+---
+import LaravelIcon from "./icons/Laravel.astro";
+---
+
+<div class="relative overflow-hidden rounded-3xl p-6 
+            bg-linear-to-br from-red-600 via-red-500 to-red-400 
+            text-white
+            border border-white/20
+            ring-1 ring-white/10
+            shadow-xl 
+            w-full max-w-xl mx-auto hover:rotate-1 transition-transform animate-blurred-fade-in">
+
+  <!-- Grid decorativo -->
+  <div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.06)_1px,transparent_1px)] bg-size-[40px_40px]"></div>
+
+  <!-- Borde interior sutil -->
+  <div class="absolute inset-0 rounded-3xl ring-1 ring-inset ring-white/15 pointer-events-none"></div>
+
+  <!-- Contenido -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 items-center relative z-10">
+    
+    <!-- Texto -->
+    <div class="max-w-full">
+        <p class="text-xs sm:text-sm font-medium text-red-100 mb-1">
+          Arquitectura Hexagonal en Laravel
+        </p>
+
+        <h2 class="text-sm sm:text-md md:text-lg font-bold mb-2">
+          Crea aplicaciones escalables y limpias
+        </h2>
+
+        <p class="text-xs sm:text-sm text-red-100 leading-relaxed">
+          Descubre cómo separar dominio, infraestructura y aplicación para lograr código limpio y testeable.
+        </p>
+    </div>
+
+    <!-- Icono -->
+    <div class="flex justify-center items-center mt-4 md:mt-0">
+        <LaravelIcon />
+    </div>
+
+  </div>
+</div>

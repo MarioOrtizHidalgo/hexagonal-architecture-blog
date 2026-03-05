@@ -1,0 +1,9 @@
+---
+import HeadingIcon from "./icons/Heading.astro";
+const { title } = Astro.props;
+---
+
+<div class="flex gap-4 items-center border-b border-gray-300 mt-10 py-2 max-w-max">
+    <HeadingIcon  width={16} height={16} color="#ff2725"/>
+    <h1 class="font-2xl font-medium">{title}</h1>
+</div>

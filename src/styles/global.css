@@ -1,0 +1,73 @@
+@import "tailwindcss";
+@import 'tailwind-animations';
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-sans: "Inter", sans-serif;
+
+  --color-cta: #ff2725;
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+pre {
+  background-color: #0d1117 !important;
+  border-radius: 0.5rem;
+  border: 1px solid #2d3748;
+  padding: 1rem 0;
+  margin: 1.5rem 0;
+  position: relative;
+  overflow-x: auto;
+}
+
+pre > code {
+  display: block;
+  font-family: var(--font-mono, 'JetBrains Mono', 'Fira Code', monospace);
+  font-size: 0.875rem;
+  line-height: 1.35;
+  padding: 0 1.25rem;
+  counter-reset: line;
+}
+
+pre code > span {
+  display: block;
+}
+
+pre code > span::before {
+  counter-increment: line;
+  content: counter(line);
+  display: inline-block;
+  width: 2rem;
+  margin-right: 1rem;
+  text-align: right;
+  color: #6b7280;
+}
+
+.copy-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.05); /* Fondo semitransparente */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.375rem; /* 6px */
+  padding: 0.35rem;
+  color: #a1a1aa; /* Gris neutro */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  opacity: 0; /* Oculto por defecto... */
+}
+
+/* ...Se muestra al pasar el ratón por el bloque de código */
+pre:hover .copy-btn {
+  opacity: 1;
+}
+
+.copy-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}

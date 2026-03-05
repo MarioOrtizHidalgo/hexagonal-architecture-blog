@@ -1,0 +1,59 @@
+---
+import Next from "./icons/Next.astro";
+import Previus from "./icons/Previus.astro";
+
+interface Props {
+    textPrevius?: string;
+    hrefPrevius?: string;
+    textNext?: string;
+    hrefNext?: string;
+}
+
+const { textPrevius, hrefPrevius ,textNext, hrefNext } = Astro.props;
+---
+{
+    textNext && textPrevius && hrefNext && hrefPrevius ? (
+        <section class="flex items-center justify-between">
+            <a 
+                href={hrefPrevius}
+                class="flex gap-2 items-center mb-4 text-xs hover:underline"
+            >
+                <Previus width={12} height={12} />
+                <span>{textPrevius}</span>
+            </a>
+            <a 
+                href={hrefNext}
+                class="flex gap-2 items-center mb-4 text-xs hover:underline"
+            >
+                <span>{textNext}</span>
+                <Next width={12} height={12} />
+            </a>
+        </section>
+    ) : (
+        <>
+            {textNext && hrefNext && (
+                <div class="flex">
+                <a 
+                    href={hrefNext}
+                    class="inline-flex justify-end gap-2 items-center mb-4 ml-auto text-xs hover:underline"
+                >
+                    <span>{textNext}</span>
+                    <Next width={12} height={12} />
+                </a>
+                </div>
+            )}
+
+            {textPrevius && hrefPrevius && (
+                <a 
+                    href={hrefPrevius}
+                    class="inline-flex gap-2 items-center justify-start mb-4 text-xs hover:underline"
+                >
+                    <Previus width={12} height={12} />
+                    <span>{textPrevius}</span>
+                </a>
+            )}
+        </>
+    )
+}
+
+

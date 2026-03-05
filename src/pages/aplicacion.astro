@@ -1,0 +1,13 @@
+---
+import Layout from "../layouts/Layout.astro";
+import AplicacionMd from "../content/docs/aplicacion.md";
+import Navigation from "../components/Navigation.astro";
+---
+
+<Layout title="Aplicación | Arquitectura Hexagonal en Laravel">
+    <section class="prose prose-sm md:prose-base lg:prose-lg mx-auto my-10">
+        <AplicacionMd />
+    </section>
+
+    <Navigation textPrevius="Anterior: Capa de Dominio" hrefPrevius="/dominio" textNext="Siguiente: Infraestructura" hrefNext="/infraestructura" />
+</Layout>

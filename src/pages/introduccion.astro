@@ -1,0 +1,13 @@
+---
+import Layout from "../layouts/Layout.astro";
+import IntroduccionMd from "../content/docs/introduccion.md";
+import Navigation from "../components/Navigation.astro";
+---
+
+<Layout title="Introducción | Arquitectura Hexagonal en Laravel">
+    <section class="prose prose-sm md:prose-base lg:prose-lg mx-auto my-10">
+        <IntroduccionMd />
+    </section>
+
+    <Navigation textNext="Siguiente: Conceptos Clave" hrefNext="/conceptos-clave"/>
+</Layout>
